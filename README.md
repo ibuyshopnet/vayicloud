@@ -15,7 +15,7 @@ Giao diện responsive với logo chữ ATN Finance iPhone Cloud, bảng chọn 
 
 ## Lưu ý
 
-- Lãi suất 12%/năm là ví dụ giả định, không phải lời chào cho vay. Công thức tính trả góp đều hàng tháng trên dư nợ giảm dần, chưa bao gồm phí.
+- Lãi suất 5,49%/tháng; quy đổi danh nghĩa 65,88%/năm, hiệu dụng 89,90%/năm khi ghép lãi tháng. Ước tính trả đều theo dư nợ giảm dần, chưa tính phí.
 - API không nhận Apple ID, mật khẩu, OTP, mã xác minh hoặc quyền truy cập iCloud.
 - Trước khi sử dụng công khai, bổ sung Turnstile, rate limit máy chủ, chính sách bảo vệ dữ liệu cá nhân, thông tin đơn vị tiếp nhận và quy trình xóa dữ liệu.
 - Nếu token bot đã bị công khai, dùng @BotFather để thu hồi và cấp token mới.
@@ -28,3 +28,15 @@ Tên thương hiệu hiển thị: ATN Finance iPhone Cloud. Cấu hình Telegra
 - Dùng Arial/Segoe UI hỗ trợ dấu tiếng Việt, không cần tải font từ Internet.
 - Áp dụng font đồng nhất cho nút, input, select, textarea.
 - Giữ nguyên API Telegram; chạy file HTML cục bộ chỉ xem giao diện, gửi form cần deploy Vercel và thiết lập biến môi trường.
+
+
+## Cập nhật biểu mẫu
+- Thêm thời hạn vay 3, 6, 9, 12, 18, 24 tháng ngay trong phần Đăng ký tư vấn miễn phí; đồng bộ với bảng ước tính.
+- Lãi suất tham khảo cố định 5,49%/tháng (65,88%/năm danh nghĩa) (không phải cam kết chào vay), tính trả đều theo dư nợ giảm dần; chưa tính phí.
+- Thông báo Telegram kèm thời hạn và lãi suất tham khảo. Giữ nguyên các biến môi trường Telegram hiện có.
+
+## Cập nhật 5,49%/tháng
+- Quy đổi danh nghĩa: 5,49% × 12 = 65,88%/năm.
+- Quy đổi hiệu dụng (lãi kép tháng): (1 + 0,0549)^12 − 1 ≈ 89,90%/năm.
+- Công cụ ước tính dùng lãi suất tháng 0,0549, công thức niên kim trả đều theo dư nợ giảm dần.
+- Không tự động ghép lãi trong lịch trả góp; quy đổi hiệu dụng chỉ để minh bạch so sánh.

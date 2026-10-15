@@ -29,6 +29,7 @@ module.exports = async (req,res) => {
     `Dung lượng: ${clean(storage,40)||'Chưa chọn'}`,
     `Số tiền: ${money.toLocaleString('vi-VN')} VNĐ`,
     `Thời hạn: ${clean(term,40)||'Chưa chọn'}`,
+    'Lãi suất tham khảo: 5,49%/tháng = 65,88%/năm danh nghĩa (89,90%/năm hiệu dụng nếu ghép lãi tháng); dư nợ giảm dần; chưa gồm phí',
     `Ghi chú: ${clean(note,500)||'Không có'}`,
     `Thời điểm (UTC): ${new Date().toISOString()}`,
     'Khách đã đồng ý được liên hệ tư vấn.'
